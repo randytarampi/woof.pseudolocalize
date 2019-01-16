@@ -1,0 +1,56 @@
+language: node_js
+dist: trusty
+matrix:
+  fast_finish: true
+  allow_failures:
+    - node_js: '6'
+    - node_js: '10'
+    - node_js: '11'
+node_js:
+  - '8'
+  - '11'
+  - '10'
+  - '6'
+env:
+  global:
+    - CPUS_COUNT=4
+    - TRAVIS_AUTHOR_EMAIL=travis@randytarampi.ca
+    - TRAVIS_AUTHOR_NAME=Travis
+    - secure: G2ccwGaw1yGnfJEKUi2lgCsNhdA3bGMIbK0ZVIzHNH3QI3aebP8GNT/1+lOx2mkZ+Otr/0VOYx6GNz4q4jEPhJiXfbX+VrtfCAAghi9A7eHx+dCULIbpQ+/SAKq1ufVLzEzt8mZ2hSOHcvTImNzm4xok1IvnO5Xqtne0v5tL7uFZwNnB2O27BW732hOXhLfoSWoB2yQ4dqZqgXAN9bD4TnlhX8LIJypfVYbXQrF7066Fbh1KU7w94gSFeapqBvRz3flhXc+eOePQ+EwoW2mYiXFoZXyd6EF4ao/b5C/mwTHEmgZzalV1PBDHqRuMp1STX8XcOPPNUpmJj5ZvjnIW/5xSEN4IC+cDYBjPyXBXYjPod0LIe0Pb3XK6WVv0YLi5a9m/3v0+jnR704emcHbAjUV8Oc/kPtuPhmerWl/2haEHKDDYytGIWzpne5oDUBPbIlfUXjvgQK5uyvVFHmH9hCh0LtMfjbNSu2XGj+OA8qT7+fEfHTvpcCOKj/WDJQBtfBs130zpENzz4mTcZ598Q58xcmeNsBCYPRs92LMpB0My2iwTupNVMeyr1+80Gk0ZnIvjy+IlWBAxOxeE9YbDz11+3CQSarMd0ZSNgUW8A2Rw9A2LaAdxpdNdwDki7fy3MOxJqEhmQ5j6+oLaK/jYyWVQn+PfX7dnzPzV7pguKWA=
+    - secure: MUG1UktxGn1Ycv2QGSKGx0mwqEhZ4uOlUeMrsHOZlXw5NmBRqPTjr0m9ABAELyTpDtRd2CWt6dYIApnKeIZWKkZ5YmpGmCLETRBjDr95nZ7IQm8EadUM1hCMCRR5FRbrAEyPwcNkx5p9BRwtu2mZx4nSnShH7yE2TCbOGCraAH8toZcNxd5Tfbi5NGbVSPtjH4fkYNpEVs99a3iX+fSpPSeqQdz9n5uqv273NZAZe7HgG1gnaY6IsZ2tvYZhRLjom77KHXtIvqrWWKCbgduwgpdgMlsMcJiFuNjBxSgxybUeTth2CM5kOJTFSu5HW1YBuDIVfzsyeyGnpW+JfiFbbHE/AY4okpivfnqN+Rq4e/FWJsK+JZw6kCFXV8pdSF7sUe/spWT0YdS32Uy/OLxWca1KqUTHEfJRrke2WcGTKA0ZecKpbgZw3qu0oErOurVaLXbgbNwRfgSVGwdrprbKIXhafb6ihbjUpQXv41CJQkdKSdPidLZxllNQ+9hkvMv1q29tkFTo2rQmk9D4Mb6Qb+9fE8gSkK5hb3gFedk+g1q+lhq+MPhNWKBlcJEq02ucumwqFjmLmhJLkb2XR/p2KGKu+lGpcb0/c5rEV707LxKaxJqtwjJshkoMzBHfW5ejyuahQrkslbnaN+zGcNMyamKArTc3D+PZBOqKZkaV+N0=
+cache:
+  timeout: 1200
+  directories:
+    - "$HOME/.npm"
+before_install:
+  - export TRAVIS_REPO_OWNER=${TRAVIS_REPO_SLUG%/*}
+  - export TRAVIS_REPO_NAME=${TRAVIS_REPO_SLUG#*/}
+  - uname -a
+  - lscpu
+  - npm install -g npm
+  - npm install -g semantic-release
+  - export NODE_ENV=production
+script:
+  - npm run pretest
+  - npm run cover
+before_deploy:
+  - mkdir -p ../dpl_cd_upload
+  - tar -zcf ../dpl_cd_upload/pseudolocalize.tar.gz -C ./ .
+  - git config --local user.name "$TRAVIS_AUTHOR_NAME"
+  - export COMMIT_AUTHOR=`git --no-pager show -s --format='%ae' \`git rev-parse\``
+  - git config --local user.email "$TRAVIS_AUTHOR_EMAIL"
+  - semantic-release
+deploy:
+  - provider: releases
+    api_key:
+      secure: SHGW1fxl+QKIDc+rH6sXc2VNs/Gtb2RITXlZ37Cm5LPOr5rWS8VkN+yanIqBYDwWhFkJ8uOKJFCbp92mc9t1PqU2tyw+GOHSy+hzrCKPZ5GbTDbi8U5V0yJWXdRAC1I98xAFMUFP/8GjKSbpYCQOepe8UA3CELUUBPs9XFiO4ajmrt8gw1hdDdumaNtQGR/RInVMmd1k72p1fjRWGQIYiAbJ421gu73vID9sPVPRDZ5FbmUG8acj8xFE/P+7BNUtjjU3yfcKQlwFSd6xn2Y8swGUfhkO484bUZSgjzIlDSDKEIOVUD3xW7C4ieAzupm21p3837+/dkH2WcCwuhmMB5WS88TUzAeyPenuWb3xuy4QqSLoDlNReZFnVXJ2TeeKWIqqTfPFyZ/rPh7jzVgsftukrCUe/RwfEGk2ucPPsf3HRSQqxPenH6gu35M53stoCOVu4CmGzZgpdCevo4bIGSAtDjvjcW/otApyIT91cWt1pR/dxwGQGHglFgWKTshSoNpeJU4sS6JNTkPfG686HeUC+QrXfwgifCEFeXcxOjZeJ9XcRUGufJZKttLzX9a+63ubkDpNgFWc477slNT+V9Ty6LcDGyev170MTsyA0ZgW33f6mPtzwzEeOpxCEUJW2OK52YmAT3NMif90jjD9MWf2T3piP38sMEGoI5Mc1Y4=
+    file: pseudolocalize.tar.gz
+    skip_cleanup: true
+    on:
+      branch: master
+      node: 8
+after_deploy:
+  - semantic-release
+notifications:
+  slack:
+    secure: bOWmLQz3rKhDU5MRB3NPDjdODhg1QtFRelTr3SQ1OGElDZ53wGVH4Kv9VWRFN3pMbG0JIry6JVzLVIEm7TsVGuhV1RdwBEKCeKwLumMo8vxUHdX2MOGLtI/NczAuSJs6SXrvcMheNvry5WHzbjVZoK/UEOa+kpFutyKb5ZoDxecDdwVjZlASX4qeAlHAYVVpErlqk5nZcLv1sg/BMB7elf3a1k420FrWPrZZJS4mJuK7U+gE4dnhE247NxSyc+zDRkY4vsV+LIgXr22FmH7Yk+jaPLaQf96ZRBXzSC6MaN50zlOpCFdgS4v4yzy4XTVthL3Us4abuCBxKSxCEJnls1irjbhvSMFX4sEdUMdRjYpr4T9lcHKxbPLMIl9Aa5mfUUiZ5gXgl1g3Ig9q8OmvmSM1d/lKMqHZn/3dBJnzcz09gBy5GPijdKUgMWqakqiQu5Ex8yx+kJQgbSsNIi2hqAUckM9fTiZ2jKEx3yh1ZMDGWbwW/7yMGzaI3C4DMRWhu+5/MkAzJhZkpiFqei0/mAvQ/antmGnewmzT/q8DAQ9RMsMaLaUwRTWEk9fI+vTKb7gNxaS9WRNtUJaV93U0H0opamobyQoQMR3+p4MoC64xkCRDH5eI08g2Db6UO1tSMDF2xGMx/QrGvC3/F5mrlV8RCnwfLzb8HGdMX5z+Luk=
