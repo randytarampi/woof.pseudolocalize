@@ -18,6 +18,7 @@ env:
     - TRAVIS_AUTHOR_NAME=Travis
     - secure: G2ccwGaw1yGnfJEKUi2lgCsNhdA3bGMIbK0ZVIzHNH3QI3aebP8GNT/1+lOx2mkZ+Otr/0VOYx6GNz4q4jEPhJiXfbX+VrtfCAAghi9A7eHx+dCULIbpQ+/SAKq1ufVLzEzt8mZ2hSOHcvTImNzm4xok1IvnO5Xqtne0v5tL7uFZwNnB2O27BW732hOXhLfoSWoB2yQ4dqZqgXAN9bD4TnlhX8LIJypfVYbXQrF7066Fbh1KU7w94gSFeapqBvRz3flhXc+eOePQ+EwoW2mYiXFoZXyd6EF4ao/b5C/mwTHEmgZzalV1PBDHqRuMp1STX8XcOPPNUpmJj5ZvjnIW/5xSEN4IC+cDYBjPyXBXYjPod0LIe0Pb3XK6WVv0YLi5a9m/3v0+jnR704emcHbAjUV8Oc/kPtuPhmerWl/2haEHKDDYytGIWzpne5oDUBPbIlfUXjvgQK5uyvVFHmH9hCh0LtMfjbNSu2XGj+OA8qT7+fEfHTvpcCOKj/WDJQBtfBs130zpENzz4mTcZ598Q58xcmeNsBCYPRs92LMpB0My2iwTupNVMeyr1+80Gk0ZnIvjy+IlWBAxOxeE9YbDz11+3CQSarMd0ZSNgUW8A2Rw9A2LaAdxpdNdwDki7fy3MOxJqEhmQ5j6+oLaK/jYyWVQn+PfX7dnzPzV7pguKWA=
     - secure: MUG1UktxGn1Ycv2QGSKGx0mwqEhZ4uOlUeMrsHOZlXw5NmBRqPTjr0m9ABAELyTpDtRd2CWt6dYIApnKeIZWKkZ5YmpGmCLETRBjDr95nZ7IQm8EadUM1hCMCRR5FRbrAEyPwcNkx5p9BRwtu2mZx4nSnShH7yE2TCbOGCraAH8toZcNxd5Tfbi5NGbVSPtjH4fkYNpEVs99a3iX+fSpPSeqQdz9n5uqv273NZAZe7HgG1gnaY6IsZ2tvYZhRLjom77KHXtIvqrWWKCbgduwgpdgMlsMcJiFuNjBxSgxybUeTth2CM5kOJTFSu5HW1YBuDIVfzsyeyGnpW+JfiFbbHE/AY4okpivfnqN+Rq4e/FWJsK+JZw6kCFXV8pdSF7sUe/spWT0YdS32Uy/OLxWca1KqUTHEfJRrke2WcGTKA0ZecKpbgZw3qu0oErOurVaLXbgbNwRfgSVGwdrprbKIXhafb6ihbjUpQXv41CJQkdKSdPidLZxllNQ+9hkvMv1q29tkFTo2rQmk9D4Mb6Qb+9fE8gSkK5hb3gFedk+g1q+lhq+MPhNWKBlcJEq02ucumwqFjmLmhJLkb2XR/p2KGKu+lGpcb0/c5rEV707LxKaxJqtwjJshkoMzBHfW5ejyuahQrkslbnaN+zGcNMyamKArTc3D+PZBOqKZkaV+N0=
+    - secure: YnGPuH08QDuq2KFnQKzF1Ydv2Pfmrp/Xq3whtPj0epQPClIx7j8LePpbMj21GrASIGDH06NjuMqnbzHRVdAr8t7Zs4vHx0/J2TJxv9xT3s2kvY5Y/54n3gDpnZMhMws0C/GJ4BiDzD/k8BAdOK57MPcRw41wRlF3NED9DhtACdMi1XEnrj4tOdAvADYuFIBZySs7+WBlIVsX4q4ocUm0xOSZpDLqJRcx8Ekf+SLjvUIXb3a+Or8q/C5WvMRjkfDb2ctb4QyvfqoVSJEV5WGsB9AifTKK7BJcR20J9twYLkNW4FGC9jTuottVrlatv5BRqT36vEc7G3LOMT2U5GgQZva0pSmADksqOyiPfHlAHX99V4hPSfuCLrz1SGvQDb9oke3WfOBhQJGBR1pFJl/dhkz/7mRqPuak+MCR0myjSmDpcSBjQEV9LDqTEI+diu8fu+sDF0h1wy41bMNCpeY7+oqSHvWVSkFZxsQalropK3JfAL83YfRvnI757FyZHWSDlpPZIhmgZ+a5DbYCAK07/dPdqjbsW8IENBJeh/FloxLcKOX9hmR8L4WCN1HwrEOQU+ryudWzCuU3bxyifErCMlM/u1vFxvn2Azk5Yqji1URP4u+3oxPdakCTE/ZZyl7CqhrgkYqYwGJZGlHNjZKtP268Q/NMviJEH8HXZBdoV9Q=
 cache:
   timeout: 1200
   directories:
@@ -30,9 +31,15 @@ before_install:
   - npm install -g npm
   - npm install -g semantic-release
   - export NODE_ENV=production
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 script:
   - npm run pretest
   - npm run cover
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 before_deploy:
   - mkdir -p ../dpl_cd_upload
   - tar -zcf ../dpl_cd_upload/pseudolocalize.tar.gz -C ./ .

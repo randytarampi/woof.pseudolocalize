@@ -24,7 +24,7 @@ plugins:
   shellcheck:
     enabled: true
 exclude_patterns:
-  - "**/node_modules/"
-  - "packages/**/dist/"
-  - "packages/**/docs/"
-  - "packages/**/test/"
+  - "node_modules/"
+  - "dist/"
+  - "docs/"
+  - "test/"
