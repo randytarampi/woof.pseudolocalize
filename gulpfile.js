@@ -1,16 +1,37 @@
 const gulp = require("gulp");
-const baseGulpfile = require("../../gulpfile.base");
 
-const taskParameters = {
-    relativePath: __dirname,
-    gulp
-};
+function isFixed(file) {
+    return file.eslint && file.eslint.fixed;
+}
 
-baseGulpfile.clean(taskParameters);
+gulp.task("eslint", () => {
+    const path = require("path");
+    const eslint = require("gulp-eslint");
+    const gulpIf = require("gulp-if");
 
-baseGulpfile.eslint(taskParameters);
+    return gulp.src(["**/*.js"])
+        .pipe(eslint({fix: true, ignorePath: path.join(__dirname, ".eslintignore")}))
+        .pipe(eslint.format())
+        .pipe(gulpIf(isFixed, gulp.dest("./")))
+        .pipe(eslint.failAfterError());
+});
+
 gulp.task("lint", gulp.parallel(["eslint"]));
 
-baseGulpfile.testUnit(taskParameters);
-baseGulpfile.testIntegration(taskParameters);
-baseGulpfile.test(taskParameters);
+gulp.task("test.unit", () => {
+    const mocha = require("gulp-mocha");
+    const mochaConfig = require("./mocha.config");
+
+    return gulp.src("test/unit/**/*.js", {read: false})
+        .pipe(mocha(mochaConfig));
+});
+
+gulp.task("test.integration", () => {
+    const mocha = require("gulp-mocha");
+    const mochaConfig = require("./mocha.config");
+
+    return gulp.src("test/integration/**/*.js", {read: false})
+        .pipe(mocha(mochaConfig));
+});
+
+gulp.task("test", gulp.parallel(["test.unit", "test.integration"]));
