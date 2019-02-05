@@ -29,12 +29,12 @@
     "prepublishOnly": "npm shrinkwrap"
   },
   "bugs": {
-    "url": "https://github.com/randytarampi/me/issues",
+    "url": "https://github.com/randytarampi/pseudolocalize/issues",
     "email": "bugs@randytarampi.ca"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/randytarampi/me.git"
+    "url": "https://github.com/randytarampi/pseudolocalize.git"
   },
   "license": "MIT",
   "keywords": [
