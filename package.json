@@ -26,6 +26,7 @@
     "pretest": "gulp -LLLL --color lint",
     "test": "NODE_ENV=test gulp -LLLL --color test",
     "cover": "rm -rf coverage/ .nyc_output/; NODE_ENV=test nyc gulp -LLLL --color test",
+    "coveralls": "cat coverage/lcov.info | coveralls",
     "prepublishOnly": "npm shrinkwrap"
   },
   "bugs": {
@@ -59,6 +60,7 @@
   ],
   "devDependencies": {
     "chai": "^4.2.0",
+    "coveralls": "^3.0.3",
     "eslint-plugin-import": "^2.14.0",
     "gulp": "^4.0.0",
     "gulp-eslint": "^5.0.0",
