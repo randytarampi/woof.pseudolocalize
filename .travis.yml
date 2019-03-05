@@ -29,7 +29,6 @@ before_install:
   - uname -a
   - lscpu
   - npm install -g npm
-  - npm install -g semantic-release
 before_script:
   - npm run pretest
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -41,22 +40,15 @@ after_script:
   - npm run coveralls
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 before_deploy:
-  - mkdir -p $TRAVIS_BUILD_DIR/../dpl_cd_upload
-  - tar -zcf $TRAVIS_BUILD_DIR/../dpl_cd_upload/pseudolocalize.tar.gz -C $TRAVIS_BUILD_DIR/ $TRAVIS_BUILD_DIR
   - git config --local user.name "$TRAVIS_AUTHOR_NAME"
-  - export COMMIT_AUTHOR=`git --no-pager show -s --format='%ae' \`git rev-parse\``
   - git config --local user.email "$TRAVIS_AUTHOR_EMAIL"
-  - semantic-release
 deploy:
-  - provider: releases
-    api_key:
-      secure: SHGW1fxl+QKIDc+rH6sXc2VNs/Gtb2RITXlZ37Cm5LPOr5rWS8VkN+yanIqBYDwWhFkJ8uOKJFCbp92mc9t1PqU2tyw+GOHSy+hzrCKPZ5GbTDbi8U5V0yJWXdRAC1I98xAFMUFP/8GjKSbpYCQOepe8UA3CELUUBPs9XFiO4ajmrt8gw1hdDdumaNtQGR/RInVMmd1k72p1fjRWGQIYiAbJ421gu73vID9sPVPRDZ5FbmUG8acj8xFE/P+7BNUtjjU3yfcKQlwFSd6xn2Y8swGUfhkO484bUZSgjzIlDSDKEIOVUD3xW7C4ieAzupm21p3837+/dkH2WcCwuhmMB5WS88TUzAeyPenuWb3xuy4QqSLoDlNReZFnVXJ2TeeKWIqqTfPFyZ/rPh7jzVgsftukrCUe/RwfEGk2ucPPsf3HRSQqxPenH6gu35M53stoCOVu4CmGzZgpdCevo4bIGSAtDjvjcW/otApyIT91cWt1pR/dxwGQGHglFgWKTshSoNpeJU4sS6JNTkPfG686HeUC+QrXfwgifCEFeXcxOjZeJ9XcRUGufJZKttLzX9a+63ubkDpNgFWc477slNT+V9Ty6LcDGyev170MTsyA0ZgW33f6mPtzwzEeOpxCEUJW2OK52YmAT3NMif90jjD9MWf2T3piP38sMEGoI5Mc1Y4=
-    file_glob: true
-    file: pseudolocalize.tar.gz
-    skip_cleanup: true
-    on:
-      branch: master
-      node: 8
+  provider: script
+  script: npx semantic-release
+  skip_cleanup: true
+  on:
+    branch: master
+    node: 8
 notifications:
   slack:
     secure: bOWmLQz3rKhDU5MRB3NPDjdODhg1QtFRelTr3SQ1OGElDZ53wGVH4Kv9VWRFN3pMbG0JIry6JVzLVIEm7TsVGuhV1RdwBEKCeKwLumMo8vxUHdX2MOGLtI/NczAuSJs6SXrvcMheNvry5WHzbjVZoK/UEOa+kpFutyKb5ZoDxecDdwVjZlASX4qeAlHAYVVpErlqk5nZcLv1sg/BMB7elf3a1k420FrWPrZZJS4mJuK7U+gE4dnhE247NxSyc+zDRkY4vsV+LIgXr22FmH7Yk+jaPLaQf96ZRBXzSC6MaN50zlOpCFdgS4v4yzy4XTVthL3Us4abuCBxKSxCEJnls1irjbhvSMFX4sEdUMdRjYpr4T9lcHKxbPLMIl9Aa5mfUUiZ5gXgl1g3Ig9q8OmvmSM1d/lKMqHZn/3dBJnzcz09gBy5GPijdKUgMWqakqiQu5Ex8yx+kJQgbSsNIi2hqAUckM9fTiZ2jKEx3yh1ZMDGWbwW/7yMGzaI3C4DMRWhu+5/MkAzJhZkpiFqei0/mAvQ/antmGnewmzT/q8DAQ9RMsMaLaUwRTWEk9fI+vTKb7gNxaS9WRNtUJaV93U0H0opamobyQoQMR3+p4MoC64xkCRDH5eI08g2Db6UO1tSMDF2xGMx/QrGvC3/F5mrlV8RCnwfLzb8HGdMX5z+Luk=
