@@ -1,3 +1,12 @@
+## [2.12.6](https://github.com/randytarampi/pseudolocalize/compare/v2.12.5...v2.12.6) (2019-03-08)
+
+
+### Bug Fixes
+
+* **semantic-release:** Fix invalid `.releaserc` yaml. ([7c226a0](https://github.com/randytarampi/pseudolocalize/commit/7c226a0))
+* **semantic-release:** Fix the `.releaserc` yaml. ([8d2f50f](https://github.com/randytarampi/pseudolocalize/commit/8d2f50f))
+* **semantic-release:** Use `@semantic-release/git` properly ([56479a3](https://github.com/randytarampi/pseudolocalize/commit/56479a3))
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
