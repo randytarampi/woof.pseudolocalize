@@ -59,22 +59,22 @@
     "i18n"
   ],
   "devDependencies": {
-    "@semantic-release/changelog": "^3.0.2",
-    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/git": "^7.0.18",
     "chai": "^4.2.0",
-    "coveralls": "^3.0.3",
-    "eslint-plugin-import": "^2.17.1",
-    "gulp": "^4.0.0",
-    "gulp-eslint": "^5.0.0",
-    "gulp-if": "^2.0.2",
-    "gulp-mocha": "^6.0.0",
-    "mocha": "^6.1.4",
-    "nyc": "^14.0.0",
-    "semantic-release": "^15.13.9",
-    "sinon": "^7.3.1"
+    "coveralls": "^3.0.9",
+    "eslint-plugin-import": "^2.19.1",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-mocha": "^7.0.2",
+    "mocha": "^7.0.0",
+    "nyc": "^15.0.0",
+    "semantic-release": "^15.14.0",
+    "sinon": "^8.0.2"
   },
   "dependencies": {
-    "commander": "^2.20.0"
+    "commander": "^4.0.1"
   },
   "engines": {
     "node": ">=8"
