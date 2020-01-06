@@ -1,3 +1,10 @@
+# [2.13.0](https://github.com/randytarampi/pseudolocalize/compare/v2.12.6...v2.13.0) (2020-01-06)
+
+
+### Features
+
+* **package:** Blindly upgrade our dependencies for the new year and support node@10, node@12 and beyond. ([30488ef](https://github.com/randytarampi/pseudolocalize/commit/30488efd63f5f4d2676b3a0e4a5ff0cd12197c7e))
+
 ## [2.12.6](https://github.com/randytarampi/pseudolocalize/compare/v2.12.5...v2.12.6) (2019-03-08)
 
 
