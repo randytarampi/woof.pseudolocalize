@@ -1,18 +1,17 @@
 # Text-to-ʕ•ᴥ•ʔ translations
 
-[![npm versions](https://img.shields.io/npm/v/@randy.tarampi/pseudolocalize.svg?style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/pseudolocalize) 
-[![npm downloads](https://img.shields.io/npm/dt/@randy.tarampi/pseudolocalize.svg?style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/pseudolocalize) 
-[![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/@randy.tarampi/pseudolocalize.svg?style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/pseudolocalize) 
-[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/@randy.tarampi/pseudolocalize.svg?style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/pseudolocalize) 
+[![npm versions](https://img.shields.io/npm/v/@randy.tarampi/pseudolocalize.svg?style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/pseudolocalize)
+[![npm downloads](https://img.shields.io/npm/dt/@randy.tarampi/pseudolocalize.svg?style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/pseudolocalize)
+[![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/@randy.tarampi/pseudolocalize.svg?style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/pseudolocalize)
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/@randy.tarampi/pseudolocalize.svg?style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/pseudolocalize)
 [![npm license](https://img.shields.io/npm/l/@randy.tarampi/pseudolocalize.svg?registry_uri=https%3A%2F%2Fregistry.npmjs.com&style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/pseudolocalize)
-[![Build status](https://img.shields.io/travis/com/randytarampi/pseudolocalize.svg?style=flat-square)](https://travis-ci.com/randytarampi/pseudolocalize) 
-[![Coverage status](https://img.shields.io/coveralls/randytarampi/pseudolocalize.svg?style=flat-square)](https://coveralls.io/github/randytarampi/pseudolocalize?branch=master) 
-[![Maintainability status](https://img.shields.io/codeclimate/maintainability-percentage/randytarampi/pseudolocalize.svg?style=flat-square)](https://codeclimate.com/github/randytarampi/pseudolocalize/maintainability)  
-[![Waffle.io board](https://badge.waffle.io/randytarampi/pseudolocalize.svg?columns=all&style=flat-square)](https://waffle.io/randytarampi/pseudolocalize) 
+[![Build status](https://img.shields.io/travis/com/randytarampi/pseudolocalize.svg?style=flat-square)](https://travis-ci.com/randytarampi/pseudolocalize)
+[![Coverage status](https://img.shields.io/coveralls/randytarampi/pseudolocalize.svg?style=flat-square)](https://coveralls.io/github/randytarampi/pseudolocalize?branch=master)
+[![Maintainability status](https://img.shields.io/codeclimate/maintainability-percentage/randytarampi/pseudolocalize.svg?style=flat-square)](https://codeclimate.com/github/randytarampi/pseudolocalize/maintainability)
 [![Analytics](https://ga-beacon.appspot.com/UA-50921068-1/beacon/github/randytarampi/me/tree/master/packages/pseudolocalize?flat&useReferrer)](https://github.com/igrigorik/ga-beacon)
 [![Greenkeeper badge](https://badges.greenkeeper.io/randytarampi/pseudolocalize.svg)](https://greenkeeper.io/)
 
-[![Install @randy.tarampi/pseudolocalize](https://nodeico.herokuapp.com/@randy.tarampi/pseudolocalize.svg)](https://www.npmjs.com/package/@randy.tarampi/pseudolocalize) 
+[![Install @randy.tarampi/pseudolocalize](https://nodeico.herokuapp.com/@randy.tarampi/pseudolocalize.svg)](https://www.npmjs.com/package/@randy.tarampi/pseudolocalize)
 
 Or, otherwise user defined pseudolocalizations...
 
