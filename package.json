@@ -74,7 +74,7 @@
     "sinon": "^8.0.2"
   },
   "dependencies": {
-    "commander": "^4.0.1"
+    "commander": "^5.0.0"
   },
   "engines": {
     "node": ">=8"
