@@ -1,3 +1,19 @@
+## [2.13.1](https://github.com/randytarampi/pseudolocalize/compare/v2.13.0...v2.13.1) (2020-04-29)
+
+
+### Bug Fixes
+
+* package.json & package-lock.json to reduce vulnerabilities ([b47236e](https://github.com/randytarampi/pseudolocalize/commit/b47236ec26c8e56fc32fcc85a2cbb265dc328905))
+* package.json & package-lock.json to reduce vulnerabilities ([717ee36](https://github.com/randytarampi/pseudolocalize/commit/717ee36017a54755f8e61a9ba5a892c193941f5e))
+* upgrade @semantic-release/changelog from 5.0.0 to 5.0.1 ([0fa2b34](https://github.com/randytarampi/pseudolocalize/commit/0fa2b34a8a244505860f489ef3ef9effdbf4ca04))
+* upgrade @semantic-release/changelog from 5.0.0 to 5.0.1 ([3279978](https://github.com/randytarampi/pseudolocalize/commit/3279978b7cb97ddb972a6f992541287c5216aa32))
+* upgrade coveralls from 3.0.9 to 3.1.0 ([ae352aa](https://github.com/randytarampi/pseudolocalize/commit/ae352aaf68b168d49adc52c248696dd4bac8864b))
+* upgrade coveralls from 3.0.9 to 3.1.0 ([d192bd6](https://github.com/randytarampi/pseudolocalize/commit/d192bd6df37daab178f832141e406d410d65f1f2))
+* upgrade eslint-plugin-import from 2.19.1 to 2.20.2 ([9d82f1b](https://github.com/randytarampi/pseudolocalize/commit/9d82f1b1d9c4627ace8651adb20c7b51c2a683ed))
+* upgrade eslint-plugin-import from 2.19.1 to 2.20.2 ([8daa7f2](https://github.com/randytarampi/pseudolocalize/commit/8daa7f222272d6b3edb723ae599df6ec43db9765))
+* upgrade semantic-release from 17.0.0 to 17.0.7 ([f94c8e0](https://github.com/randytarampi/pseudolocalize/commit/f94c8e0ad448c26ecfe9c124379429c1f97f7282))
+* upgrade semantic-release from 17.0.0 to 17.0.7 ([9aa2cf6](https://github.com/randytarampi/pseudolocalize/commit/9aa2cf6716011691a933eec764beab0c09cbce37))
+
 # [2.13.0](https://github.com/randytarampi/pseudolocalize/compare/v2.12.6...v2.13.0) (2020-01-06)
 
 
