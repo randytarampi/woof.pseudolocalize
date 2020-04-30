@@ -68,13 +68,13 @@
     "gulp-eslint": "^6.0.0",
     "gulp-if": "^3.0.0",
     "gulp-mocha": "^7.0.2",
-    "mocha": "^7.1.1",
+    "mocha": "^7.1.2",
     "nyc": "^15.0.1",
     "semantic-release": "^17.0.7",
     "sinon": "^9.0.2"
   },
   "dependencies": {
-    "commander": "^5.0.0"
+    "commander": "^5.1.0"
   },
   "engines": {
     "node": ">=8"
