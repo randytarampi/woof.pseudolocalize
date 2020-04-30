@@ -1,3 +1,18 @@
+## [2.13.2](https://github.com/randytarampi/pseudolocalize/compare/v2.13.1...v2.13.2) (2020-04-30)
+
+
+### Bug Fixes
+
+* package.json, package-lock.json & .snyk to reduce vulnerabilities ([06533ef](https://github.com/randytarampi/pseudolocalize/commit/06533ef7afab5168c4a6005a0a68d09462ca184f))
+* package.json, package-lock.json & .snyk to reduce vulnerabilities ([11371b1](https://github.com/randytarampi/pseudolocalize/commit/11371b11c1800d61a33d450d2989b668172081ea))
+* package.json, package-lock.json & .snyk to reduce vulnerabilities ([0485c35](https://github.com/randytarampi/pseudolocalize/commit/0485c357892fdd0d2d88aef6f619e5df4fe3713f))
+* upgrade commander from 5.0.0 to 5.1.0 ([d84175c](https://github.com/randytarampi/pseudolocalize/commit/d84175c201216b4015f74fc066685f73159c4639))
+* upgrade commander from 5.0.0 to 5.1.0 ([550479d](https://github.com/randytarampi/pseudolocalize/commit/550479d598215c17850328d06e364938a0360d62))
+* upgrade mocha from 7.1.1 to 7.1.2 ([bab842f](https://github.com/randytarampi/pseudolocalize/commit/bab842f61303d3ee2f116ddbe4402dd152c409b1))
+* upgrade mocha from 7.1.1 to 7.1.2 ([ebade69](https://github.com/randytarampi/pseudolocalize/commit/ebade695916a6bbb372ff096be6679032a97c689))
+* upgrade nyc from 15.0.0 to 15.0.1 ([a680a89](https://github.com/randytarampi/pseudolocalize/commit/a680a89df187574653463c09f48d63dea628621e))
+* upgrade nyc from 15.0.0 to 15.0.1 ([198837a](https://github.com/randytarampi/pseudolocalize/commit/198837a0c56f37a7e384def916b3121ed03ac8ae))
+
 ## [2.13.1](https://github.com/randytarampi/pseudolocalize/compare/v2.13.0...v2.13.1) (2020-04-29)
 
 
