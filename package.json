@@ -1,65 +1,17 @@
 {
   "name": "@randy.tarampi/pseudolocalize",
-  "publishConfig": {
-    "access": "public"
-  },
+  "description": "Text-to-ʕ•ᴥ•ʔ translations",
+  "version": "2.13.2",
   "author": {
     "name": "Randy Tarampi",
     "email": "rt@randytarampi.ca",
     "url": "https://www.randytarampi.ca"
   },
-  "version": "2.13.2",
-  "description": "Text-to-ʕ•ᴥ•ʔ translations",
-  "main": "lib/pseudolocalizer.js",
-  "directories": {
-    "lib": "./src/lib",
-    "bin": "./bin",
-    "test": "./test"
+  "bugs": "https://github.com/randytarampi/pseudolocalize/issues",
+  "dependencies": {
+    "commander": "^5.1.0",
+    "snyk": "^1.316.2"
   },
-  "files": [
-    "bin",
-    "lib",
-    "npm-shrinkwrap.json"
-  ],
-  "sideEffects": false,
-  "scripts": {
-    "pretest": "gulp -LLLL --color lint",
-    "test": "NODE_ENV=test gulp -LLLL --color test",
-    "cover": "rm -rf coverage/ .nyc_output/; NODE_ENV=test nyc gulp -LLLL --color test",
-    "coveralls": "cat coverage/lcov.info | coveralls",
-    "prepublishOnly": "npm shrinkwrap",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
-  },
-  "bugs": {
-    "url": "https://github.com/randytarampi/pseudolocalize/issues",
-    "email": "bugs@randytarampi.ca"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/randytarampi/pseudolocalize.git"
-  },
-  "license": "MIT",
-  "keywords": [
-    "bear",
-    "woof",
-    "纬",
-    "横糸",
-    "씨",
-    "subtegmine",
-    "гав",
-    "υφάδι",
-    "نسيج",
-    "پود",
-    "বুনন",
-    "ʕ•ᴥ•ʔ",
-    "pseudolocalization",
-    "localization",
-    "internationalization",
-    "p16n",
-    "l10n",
-    "i18n"
-  ],
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
@@ -75,12 +27,54 @@
     "semantic-release": "^17.0.7",
     "sinon": "^9.0.2"
   },
-  "dependencies": {
-    "commander": "^5.1.0",
-    "snyk": "^1.316.2"
+  "directories": {
+    "lib": "./src/lib",
+    "bin": "./bin",
+    "test": "./test"
   },
   "engines": {
     "node": ">=8"
   },
+  "files": [
+    "bin",
+    "lib",
+    "npm-shrinkwrap.json"
+  ],
+  "keywords": [
+    "bear",
+    "i18n",
+    "internationalization",
+    "l10n",
+    "localization",
+    "p16n",
+    "pseudolocalization",
+    "subtegmine",
+    "woof",
+    "ʕ•ᴥ•ʔ",
+    "υφάδι",
+    "гав",
+    "نسيج",
+    "پود",
+    "বুনন",
+    "横糸",
+    "纬",
+    "씨"
+  ],
+  "license": "MIT",
+  "main": "lib/pseudolocalizer.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "randytarampi/pseudolocalize.git",
+  "scripts": {
+    "cover": "rm -rf coverage/ .nyc_output/; NODE_ENV=test nyc gulp -LLLL --color test",
+    "coveralls": "cat coverage/lcov.info | coveralls",
+    "prepare": "npm run snyk-protect",
+    "prepublishOnly": "npm shrinkwrap",
+    "pretest": "gulp -LLLL --color lint",
+    "snyk-protect": "snyk protect",
+    "test": "NODE_ENV=test gulp -LLLL --color test"
+  },
+  "sideEffects": false,
   "snyk": true
 }
