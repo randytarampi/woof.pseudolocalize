@@ -48,6 +48,8 @@ deploy:
   on:
     branch: master
     node: 10
+    os: linux
+    condition: "$TRAVIS_OS_NAME = linux"
 notifications:
   slack:
     secure: bOWmLQz3rKhDU5MRB3NPDjdODhg1QtFRelTr3SQ1OGElDZ53wGVH4Kv9VWRFN3pMbG0JIry6JVzLVIEm7TsVGuhV1RdwBEKCeKwLumMo8vxUHdX2MOGLtI/NczAuSJs6SXrvcMheNvry5WHzbjVZoK/UEOa+kpFutyKb5ZoDxecDdwVjZlASX4qeAlHAYVVpErlqk5nZcLv1sg/BMB7elf3a1k420FrWPrZZJS4mJuK7U+gE4dnhE247NxSyc+zDRkY4vsV+LIgXr22FmH7Yk+jaPLaQf96ZRBXzSC6MaN50zlOpCFdgS4v4yzy4XTVthL3Us4abuCBxKSxCEJnls1irjbhvSMFX4sEdUMdRjYpr4T9lcHKxbPLMIl9Aa5mfUUiZ5gXgl1g3Ig9q8OmvmSM1d/lKMqHZn/3dBJnzcz09gBy5GPijdKUgMWqakqiQu5Ex8yx+kJQgbSsNIi2hqAUckM9fTiZ2jKEx3yh1ZMDGWbwW/7yMGzaI3C4DMRWhu+5/MkAzJhZkpiFqei0/mAvQ/antmGnewmzT/q8DAQ9RMsMaLaUwRTWEk9fI+vTKb7gNxaS9WRNtUJaV93U0H0opamobyQoQMR3+p4MoC64xkCRDH5eI08g2Db6UO1tSMDF2xGMx/QrGvC3/F5mrlV8RCnwfLzb8HGdMX5z+Luk=
