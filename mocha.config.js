@@ -3,5 +3,8 @@ module.exports = {
     sort: true,
     fullTrace: true,
     checkLeaks: true,
-    exit: true
+    exit: true,
+    reporter: process.env.CI
+        ? "mocha-junit-reporter"
+        : "spec"
 };
