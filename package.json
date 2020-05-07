@@ -68,7 +68,7 @@
   },
   "repository": "randytarampi/pseudolocalize.git",
   "scripts": {
-    "cover": "rm -rf coverage/ .nyc_output/; NODE_ENV=test nyc gulp -LLLL --color test",
+    "cover": "NODE_ENV=test nyc gulp -LLLL --color test",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "prepare": "npm run snyk-protect",
     "prepublishOnly": "npm shrinkwrap",
