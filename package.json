@@ -17,6 +17,7 @@
     "@semantic-release/git": "^9.0.0",
     "chai": "^4.2.0",
     "coveralls": "^3.1.0",
+    "cross-env": "^6.0.3",
     "eslint-plugin-import": "^2.20.2",
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
@@ -68,13 +69,13 @@
   },
   "repository": "randytarampi/pseudolocalize.git",
   "scripts": {
-    "cover": "NODE_ENV=test nyc gulp -LLLL --color test",
+    "cover": "cross-env-shell NODE_ENV=test nyc gulp -LLLL --color test",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "prepare": "npm run snyk-protect",
     "prepublishOnly": "npm shrinkwrap",
     "pretest": "gulp -LLLL --color lint",
     "snyk-protect": "snyk protect",
-    "test": "NODE_ENV=test gulp -LLLL --color test"
+    "test": "cross-env-shell NODE_ENV=test gulp -LLLL --color test"
   },
   "sideEffects": false,
   "snyk": true
