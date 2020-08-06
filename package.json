@@ -10,7 +10,7 @@
   "bugs": "https://github.com/randytarampi/pseudolocalize/issues",
   "dependencies": {
     "commander": "^6.0.0",
-    "snyk": "^1.369.2"
+    "snyk": "^1.369.3"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
