@@ -1,3 +1,10 @@
+## [2.13.7](https://github.com/randytarampi/pseudolocalize/compare/v2.13.6...v2.13.7) (2020-09-18)
+
+
+### Bug Fixes
+
+* upgrade snyk from 1.395.0 to 1.398.1 ([abf2a5e](https://github.com/randytarampi/pseudolocalize/commit/abf2a5ee4fd5d162bdc2113b3d815ca667391bab))
+
 ## [2.13.6](https://github.com/randytarampi/pseudolocalize/compare/v2.13.5...v2.13.6) (2020-09-17)
 
 
