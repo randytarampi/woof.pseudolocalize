@@ -1,3 +1,10 @@
+## [2.13.8](https://github.com/randytarampi/pseudolocalize/compare/v2.13.7...v2.13.8) (2020-09-22)
+
+
+### Bug Fixes
+
+* upgrade semantic-release from 17.1.1 to 17.1.2 ([2fc5a3d](https://github.com/randytarampi/pseudolocalize/commit/2fc5a3dd6b45614fac0b026f23f9d7396cd5db60))
+
 ## [2.13.7](https://github.com/randytarampi/pseudolocalize/compare/v2.13.6...v2.13.7) (2020-09-18)
 
 
