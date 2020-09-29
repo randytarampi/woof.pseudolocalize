@@ -1,3 +1,11 @@
+## [2.13.10](https://github.com/randytarampi/pseudolocalize/compare/v2.13.9...v2.13.10) (2020-09-29)
+
+
+### Bug Fixes
+
+* upgrade eslint-plugin-import from 2.22.0 to 2.22.1 ([b047263](https://github.com/randytarampi/pseudolocalize/commit/b0472635fa596ece57e2e74c3ef2d629f6813bb0))
+* upgrade snyk from 1.399.1 to 1.400.0 ([f98cb75](https://github.com/randytarampi/pseudolocalize/commit/f98cb75ba4b60432c85fab9342a532c2892bbc33))
+
 ## [2.13.9](https://github.com/randytarampi/pseudolocalize/compare/v2.13.8...v2.13.9) (2020-09-23)
 
 
