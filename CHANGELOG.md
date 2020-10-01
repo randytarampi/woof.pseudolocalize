@@ -1,3 +1,11 @@
+## [2.13.11](https://github.com/randytarampi/pseudolocalize/compare/v2.13.10...v2.13.11) (2020-10-01)
+
+
+### Bug Fixes
+
+* upgrade sinon from 9.0.3 to 9.1.0 ([c7cfac5](https://github.com/randytarampi/pseudolocalize/commit/c7cfac5f23dd2ca8717f0f56ff565ccbf4b36792))
+* upgrade snyk from 1.400.0 to 1.402.0 ([deb66ac](https://github.com/randytarampi/pseudolocalize/commit/deb66ac6ceded03d8d678281dbf60e884f6606aa))
+
 ## [2.13.10](https://github.com/randytarampi/pseudolocalize/compare/v2.13.9...v2.13.10) (2020-09-29)
 
 
