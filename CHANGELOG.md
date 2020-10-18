@@ -1,3 +1,13 @@
+## [2.13.13](https://github.com/randytarampi/pseudolocalize/compare/v2.13.12...v2.13.13) (2020-10-18)
+
+
+### Bug Fixes
+
+* package.json & package-lock.json to reduce vulnerabilities ([82e03c6](https://github.com/randytarampi/pseudolocalize/commit/82e03c620f7bc2215fa6bb8e04826db1847595c1))
+* upgrade semantic-release from 17.1.2 to 17.2.0 ([3f0c397](https://github.com/randytarampi/pseudolocalize/commit/3f0c397d05d7c3bab75254d1bf9d4475126e61ad))
+* upgrade sinon from 9.1.0 to 9.2.0 ([8545d45](https://github.com/randytarampi/pseudolocalize/commit/8545d450a539264a4e951130daa8babd97bd0c08))
+* upgrade snyk from 1.405.1 to 1.406.0 ([2ed9af3](https://github.com/randytarampi/pseudolocalize/commit/2ed9af379d4ae067aec41542fbffe86fad275e6d))
+
 ## [2.13.12](https://github.com/randytarampi/pseudolocalize/compare/v2.13.11...v2.13.12) (2020-10-03)
 
 
