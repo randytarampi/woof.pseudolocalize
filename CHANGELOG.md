@@ -1,3 +1,11 @@
+## [2.13.14](https://github.com/randytarampi/pseudolocalize/compare/v2.13.13...v2.13.14) (2020-10-19)
+
+
+### Bug Fixes
+
+* upgrade semantic-release from 17.2.0 to 17.2.1 ([01bd55e](https://github.com/randytarampi/pseudolocalize/commit/01bd55e3c602d6d651aa3bac99e7b515db33efa3))
+* upgrade snyk from 1.406.0 to 1.414.1 ([7c78310](https://github.com/randytarampi/pseudolocalize/commit/7c783107c381c5a4df1a58c7c0657858e143f433))
+
 ## [2.13.13](https://github.com/randytarampi/pseudolocalize/compare/v2.13.12...v2.13.13) (2020-10-18)
 
 
