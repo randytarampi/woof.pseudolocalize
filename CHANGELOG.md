@@ -1,3 +1,12 @@
+## [2.13.17](https://github.com/randytarampi/pseudolocalize/compare/v2.13.16...v2.13.17) (2020-10-31)
+
+
+### Bug Fixes
+
+* upgrade commander from 6.1.0 to 6.2.0 ([96bca57](https://github.com/randytarampi/pseudolocalize/commit/96bca57b21aa652a86ee23d56cb588ca2ba8f11d))
+* upgrade semantic-release from 17.2.1 to 17.2.2 ([4348288](https://github.com/randytarampi/pseudolocalize/commit/4348288a9e4dc0081958d5f93246ef13e3fb8596))
+* upgrade snyk from 1.416.0 to 1.419.0 ([aa43828](https://github.com/randytarampi/pseudolocalize/commit/aa43828b0ec145f2c04c05210497dead5af987a9))
+
 ## [2.13.16](https://github.com/randytarampi/pseudolocalize/compare/v2.13.15...v2.13.16) (2020-10-21)
 
 
