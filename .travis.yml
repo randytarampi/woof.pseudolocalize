@@ -1,6 +1,5 @@
 language: node_js
-os:
-- linux
+os: linux
 dist: bionic
 matrix:
   fast_finish: true
