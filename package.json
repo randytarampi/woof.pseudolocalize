@@ -9,7 +9,7 @@
   },
   "bugs": "https://github.com/randytarampi/pseudolocalize/issues",
   "dependencies": {
-    "commander": "^6.2.0",
+    "commander": "^6.2.1",
     "snyk": "^1.436.0"
   },
   "devDependencies": {
